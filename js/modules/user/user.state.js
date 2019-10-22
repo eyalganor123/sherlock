@@ -1,3 +1,4 @@
 var userState = {
-    users: []
+    users: [],
+    currentUser: null
 }

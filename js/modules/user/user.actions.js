@@ -1,7 +1,14 @@
 class UserActions {
-    getUsers() {
-        return 'users';
+
+    constructor(service) {
+        this.service = service;
+    }
+
+    fetchUsers() {
+        return this.service.fetchUsers();
+    }
+
+    setCurrentUser(userId) {
+                
     }
 }
-
-export default new UserActions();
