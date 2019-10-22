@@ -6,23 +6,16 @@ init();
 function setup() {
   states = initStates();
   services = initServices(states);
-  actions = initActions(services, states);
 }
 
 function init() {
-  var users = services.user.fetchUsers();
+  services.user.fetchUsers();
   console.log(states.user);
 }
 
 function initServices(states) {
   return {
     user: new UserService(states.user)
-  }
-}
-
-function initActions(services, states) {
-  return {
-    user: new UserActions(services.user),
   }
 }
 
